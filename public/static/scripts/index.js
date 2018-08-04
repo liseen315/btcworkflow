@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/scripts/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/scripts/index.js":
-/*!******************************!*\
-  !*** ./src/scripts/index.js ***!
-  \******************************/
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/log */ \"./src/scripts/utils/log.js\");\n\nclass person {\n  constructor () {\n    Object(_utils_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  }\n}\n\nnew person()\n\n//# sourceURL=webpack:///./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/log */ \"./utils/log.js\");\n\nclass person {\n  constructor () {\n    Object(_utils_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n  }\n}\n\nnew person()\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
-/***/ "./src/scripts/utils/log.js":
-/*!**********************************!*\
-  !*** ./src/scripts/utils/log.js ***!
-  \**********************************/
+/***/ "./utils/log.js":
+/*!**********************!*\
+  !*** ./utils/log.js ***!
+  \**********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 10000')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./src/scripts/utils/log.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 999')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./utils/log.js?");
 
 /***/ })
 

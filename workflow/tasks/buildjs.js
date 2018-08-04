@@ -1,20 +1,15 @@
 const webpack = require('webpack')
-const webpackConfig = require('../wpconfig.js')
-const log = require('../common/log.js')
-
-let wpConfig = Object.create(webpackConfig(process.env.NODE_ENV))
-let compiler = webpack(wpConfig)
+const webpackConfig = require('../wpconfig')
 
 module.exports = function (gulp, plugin, pathConfig) {
-  gulp.task('buildjs', function (callback) {
-    // compiler.watch({aggregateTimeout: 300,},function (err, stats) {
-    //   if (err) {
-    //     throw new Error('webpack:build-js' + err)
-    //   }
-    //   log("[webpack:build-js]", stats.toString({
-    //     colors: true
-    //   }),'GREEN')
-    //   callback()
-    // })
+  let wpConfig = webpackConfig(process.env.NODE_ENV,pathConfig)
+  let compiler = webpack(wpConfig)
+  gulp.task('compileJS', function (callback) {
+    compiler.watch({ aggregateTimeout: 300, }, function (err, stats) {
+      if (err) {
+        throw new Error('webpack:build-js' + err)
+      }
+      console.log(stats.toString({colors:true,chunks:false}))
+    })
   })
 }

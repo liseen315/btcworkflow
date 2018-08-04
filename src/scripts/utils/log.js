@@ -1,4 +1,4 @@
 function log() {
-  console.log('this is a log 10000')
+  console.log('this is a log 999')
 }
 export default log
