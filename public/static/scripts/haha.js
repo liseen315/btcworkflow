@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/log */ \"./utils/log.js\");\n\n\nObject(_utils_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack:///./haha.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/log */ \"./utils/log.js\");\n\n\nObject(_utils_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\nalert(1)\n\n//# sourceURL=webpack:///./haha.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 999')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./utils/log.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 55')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./utils/log.js?");
 
 /***/ })
 

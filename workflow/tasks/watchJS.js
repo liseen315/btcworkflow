@@ -4,8 +4,8 @@ const webpackConfig = require('../wpconfig')
 module.exports = function (gulp, plugin, pathConfig) {
   let wpConfig = webpackConfig(process.env.NODE_ENV,pathConfig)
   let compiler = webpack(wpConfig)
-  gulp.task('compileJS', function (callback) {
-    compiler.watch({ aggregateTimeout: 300, }, function (err, stats) {
+  gulp.task('watchJS', function (callback) {
+    compiler.watch({},function (err, stats) {
       if (err) {
         throw new Error('webpack:build-js' + err)
       }
