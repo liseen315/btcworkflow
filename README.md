@@ -31,7 +31,7 @@ npm run release
 
 ```
 
-# clean publick
+# clean public
 ```
 git clone https://github.com/liseen315/btcworkflow.git
 cd btcworkflow
