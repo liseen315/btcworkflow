@@ -38,6 +38,7 @@
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
     "require-dir": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.4"
   },
   "dependencies": {}

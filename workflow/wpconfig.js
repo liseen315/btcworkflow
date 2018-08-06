@@ -1,21 +1,38 @@
 const path = require('path')
+const pathConfig = require('./pathConfig')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const HappyPack = require('happypack')
 const getEntry = require('./common/getEntry')
-const webpack = require('webpack')
 //后续需要插件需要在这个方法内实现
 let getPlugins = function (env) {
-  return [new webpack.optimize.SplitChunksPlugin({
-    chunks: "all",
-    minSize: 20000,
-    minChunks: 1,
-    maxAsyncRequests: 5,
-    maxInitialRequests: 3,
-    name: true
-  })]
+  let pluginList = []
+  pluginList.push(
+    new UglifyJsPlugin(
+      {
+        test: /\.js($|\?)/i,
+        include: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/script/**/*.js'),
+        uglifyOptions: {
+          ie8: false,
+          ecma: 8,
+          warnings: false,
+        }
+      }
+    ),
+    // new HappyPack({
+    //   loaders: [{
+    //     loader: 'babel-loader',
+    //     query: {
+    //       cacheDirectory: true,
+    //       presets: ['@babel/preset-env'],
+    //     }
+    //   }]
+    // })
+  )
+  return pluginList
 }
 
 module.exports = function (env, pathConfig) {
   // //配置内的相对目录不要乱动.容易出事
-  // console.log('----path--',path.resolve(__dirname,'../node_modules/'))
   return {
     target: "web",
     context: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/scripts'),
@@ -29,6 +46,7 @@ module.exports = function (env, pathConfig) {
         {
           test: /\.js$/,
           include: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/script/**/*.js'),
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
