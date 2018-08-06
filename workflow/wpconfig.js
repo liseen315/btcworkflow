@@ -27,7 +27,7 @@ module.exports = function (env, pathConfig) {
             options: {
               presets: ['@babel/preset-env'],
               cacheDirectory: true, //开缓存会降150+ms
-              // plugins: ['@babel/plugin-transform-runtime'] 这一块插件可以需要在线上验证后再决定加不加
+              plugins: ['@babel/plugin-transform-runtime'] //这一块插件可以需要在线上验证后再决定加不加
             }
           }
         }

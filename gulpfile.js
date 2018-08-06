@@ -28,3 +28,5 @@ gulp.task('del', function () {
 gulp.task('release', ['hash:css','hash:js'])
 
 gulp.task('default', ['image', 'scss', 'watchJS', 'watch'])
+
+//应该写个脚本清理babel-loader cache
