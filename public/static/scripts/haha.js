@@ -86,26 +86,15 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!***********************************************************************************************************!*\
-  !*** /Users/admin/liseen/gitpro/btcworkflow/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \***********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("function _interopRequireDefault(obj) {\n  return obj && obj.__esModule ? obj : {\n    default: obj\n  };\n}\n\nmodule.exports = _interopRequireDefault;\n\n//# sourceURL=webpack:////Users/admin/liseen/gitpro/btcworkflow/node_modules/@babel/runtime/helpers/interopRequireDefault.js?");
-
-/***/ }),
-
 /***/ "./haha.js":
 /*!*****************!*\
   !*** ./haha.js ***!
   \*****************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"../../node_modules/@babel/runtime/helpers/interopRequireDefault.js\");\n\nvar _log = _interopRequireDefault(__webpack_require__(/*! ./utils/log */ \"./utils/log.js\"));\n\n(0, _log.default)();\n\n//# sourceURL=webpack:///./haha.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/log */ \"./utils/log.js\");\n\n\nObject(_utils_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack:///./haha.js?");
 
 /***/ }),
 
@@ -113,11 +102,11 @@ eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/he
 /*!**********************!*\
   !*** ./utils/log.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nfunction log() {\n  console.log('this is a log liseen');\n}\n\nvar _default = log;\nexports.default = _default;\n\n//# sourceURL=webpack:///./utils/log.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 123132123')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./utils/log.js?");
 
 /***/ })
 

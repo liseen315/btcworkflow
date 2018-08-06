@@ -1,9 +1,16 @@
 const path = require('path')
 const getEntry = require('./common/getEntry')
-
+const webpack = require('webpack')
 //后续需要插件需要在这个方法内实现
 let getPlugins = function (env) {
-  return []
+  return [new webpack.optimize.SplitChunksPlugin({
+    chunks: "all",
+    minSize: 20000,
+    minChunks: 1,
+    maxAsyncRequests: 5,
+    maxInitialRequests: 3,
+    name: true
+  })]
 }
 
 module.exports = function (env, pathConfig) {
@@ -21,7 +28,7 @@ module.exports = function (env, pathConfig) {
       rules: [
         {
           test: /\.js$/,
-          exclude: path.resolve(__dirname,'../node_modules'),
+          include: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/script/**/*.js'),
           use: {
             loader: 'babel-loader',
             options: {
@@ -40,6 +47,9 @@ module.exports = function (env, pathConfig) {
       modules: [path.resolve(__dirname, '../' + pathConfig.sourceRoot), "node_modules"]
     },
     plugins: getPlugins(env),
+    externals: {
+      jquery: 'window.jQuery'
+    },
     performance: {
       hints: "warning",
       maxEntrypointSize: 400000,
