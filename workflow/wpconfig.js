@@ -7,26 +7,26 @@ let getPlugins = function (env) {
 }
 
 module.exports = function (env, pathConfig) {
-  //配置内的相对目录不要乱动.容易出事
-  // console.log('----path--',path.resolve(__dirname, '../'))
+  // //配置内的相对目录不要乱动.容易出事
+  // console.log('----path--',path.resolve(__dirname,'../node_modules/'))
   return {
     target: "web",
-    context: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/scripts/'),
+    context: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/scripts'),
     entry: getEntry(pathConfig.sourceRoot + '/scripts', 'js'),
     output: {
       filename: '[name].js',
-      path: path.resolve(__dirname, '../' + pathConfig.distRoot + '/static/scripts/')
+      path: path.resolve(__dirname, '../' + pathConfig.distRoot + '/static/scripts')
     },
     module: {
       rules: [
         {
           test: /\.js$/,
-          exclude: /node_modules/,
+          exclude: path.resolve(__dirname,'../node_modules'),
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              cacheDirectory: true,
+              cacheDirectory: true, //开缓存会降150+ms
               // plugins: ['@babel/plugin-transform-runtime'] 这一块插件可以需要在线上验证后再决定加不加
             }
           }
