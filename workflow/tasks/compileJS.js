@@ -10,6 +10,7 @@ module.exports = function (gulp, plugin, pathConfig) {
         throw new Error('webpack:build-js' + err)
       }
       console.log(stats.toString({colors:true,chunks:false}))
+      callback()
     })
   })
 }

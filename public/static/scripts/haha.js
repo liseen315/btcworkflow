@@ -90,11 +90,11 @@
 /*!*****************!*\
   !*** ./haha.js ***!
   \*****************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/log */ \"./utils/log.js\");\n\n\nObject(_utils_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\nalert(1)\n\n//# sourceURL=webpack:///./haha.js?");
+eval("\n\nvar _log = _interopRequireDefault(__webpack_require__(/*! ./utils/log */ \"./utils/log.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _log.default)();\n\n//# sourceURL=webpack:///./haha.js?");
 
 /***/ }),
 
@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /*!**********************!*\
   !*** ./utils/log.js ***!
   \**********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 55')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./utils/log.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nfunction log() {\n  console.log('this is a log liseen');\n}\n\nvar _default = log;\nexports.default = _default;\n\n//# sourceURL=webpack:///./utils/log.js?");
 
 /***/ })
 

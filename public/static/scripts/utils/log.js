@@ -90,11 +90,11 @@
 /*!**********************!*\
   !*** ./utils/log.js ***!
   \**********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction log() {\n  console.log('this is a log 55')\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./utils/log.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nfunction log() {\n  console.log('this is a log liseen');\n}\n\nvar _default = log;\nexports.default = _default;\n\n//# sourceURL=webpack:///./utils/log.js?");
 
 /***/ })
 
