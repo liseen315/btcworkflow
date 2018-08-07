@@ -1,7 +1,6 @@
-import log from './utils/log'
 class person {
-  constructor () {
-    log()
+  constructor() {
+    console.log('haha')
   }
 }
 

@@ -45,8 +45,8 @@ module.exports = function (env, pathConfig) {
       rules: [
         {
           test: /\.js$/,
-          include: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/script/**/*.js'),
-          exclude: /node_modules/,
+          //include: path.resolve(__dirname, '../' + pathConfig.sourceRoot + '/script/**/*.js'),
+          exclude: path.resolve(__dirname,'../node_modules/'),
           use: {
             loader: 'babel-loader',
             options: {
