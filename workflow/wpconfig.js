@@ -59,7 +59,7 @@ module.exports = function (env, pathConfig) {
       ]
     },
     mode: env,
-    devtool: (env === 'production') ? 'none' : 'eval',
+    devtool: (env === 'production') ? 'hidden-source-map' : 'cheap-module-eval-source-map',
     resolve: {
       extensions: [".js"],
       modules: [path.resolve(__dirname, '../' + pathConfig.sourceRoot), "node_modules"]
