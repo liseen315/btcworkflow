@@ -5,10 +5,10 @@ module.exports = {
   entry: {
     vendors: [
       'jquery',
-      'es6-promise',
       'vue',
+      'es6-promise',
       'vuex',
-      'lodash',
+      'flot',
     ],
   },
   output: {

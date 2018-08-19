@@ -5,9 +5,13 @@ const webpack = require('webpack')
 //后续需要插件需要在这个方法内实现
 let getPlugins = function (env) {
   let pluginList = [
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: require('./public/static/scripts/vendors.manifest.json')
+    // new webpack.DllReferencePlugin({
+    //   context: __dirname,
+    //   manifest: require('./public/static/scripts/vendors.manifest.json')
+    // }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ]
   return pluginList
