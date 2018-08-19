@@ -1,9 +1,4 @@
-import log from './utils/log'
-class person {
-  constructor() {
-    console.log('haha')
-    log()
-  }
-}
+import $ from 'jquery'
+import 'es6-promise/auto'
 
-new person()
+$('#liseen').text('hahah')

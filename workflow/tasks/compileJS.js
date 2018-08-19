@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const webpackConfig = require('../wpconfig')
+const webpackConfig = require('../../webpack.config')
 
 module.exports = function (gulp, plugin, pathConfig) {
   let wpConfig = webpackConfig(process.env.NODE_ENV,pathConfig)

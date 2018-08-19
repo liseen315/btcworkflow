@@ -1,3 +1,4 @@
-import log from './utils/log'
+import $ from 'jquery'
 
-log()
+$('#fangshu').text('change to liseen')
+
